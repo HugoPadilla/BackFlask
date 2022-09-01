@@ -1,44 +1,38 @@
 from app import db
 from Modelos import Estudiante2
-'''
-Crear
 
+'''
 db.create_all()
 
-estudiante = Estudiante2.Estudiante2("12825","Pedro","Perez")
-estudiante2 = Estudiante2.Estudiante2("12925","clark","Kent")
+estudiante = Estudiante2.Estudiante2("987","Juana","de Arco")
+estudiante2 = Estudiante2.Estudiante2("789","Tony","Stark")
 
 db.session.add_all([estudiante,estudiante2])
 db.session.commit()
 
-Muestra todos los registros
 
 resultado = Estudiante2.Estudiante2.query.all()
-print("lOS ESTUDIANTES SON : ")
 print(resultado)
 
-
-
-resultado2 = Estudiante2.Estudiante2.query.filter_by(nombre="Edgar")
+resultado2 = Estudiante2.Estudiante2.query.filter_by(nombre="Pedro")
 print(resultado2.all())
 
-resultado3 = Estudiante2.Estudiante2.query.get(10)
 
 
+resultado3 = Estudiante2.Estudiante2.query.get(3)
+print(resultado3)
 
-
-hacer el update
-
-
-resultado4 = Estudiante2.Estudiante2.query.get(10)
-resultado4.nombre = "Diana"
-resultado4.cedula = "78565623"
-db.session.add(resultado4)
+resultado3.apellido= "Pedrancho"
+resultado3.nombre= "Ernestino"
+resultado3.cedula= "234234"
+db.session.add(resultado3)
 db.session.commit()
 
-elimina registros
 
-resultado5 = Estudiante2.Estudiante2.query.get(10)
-db.session.delete(resultado5)
+resultado4 = Estudiante2.Estudiante2.query.get(3)
+db.session.delete(resultado4)
 db.session.commit()
 '''
+
+
+

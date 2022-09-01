@@ -13,8 +13,9 @@ class Estudiante2(db.Model):
         self.nombre = nombre
         self.apellido = apellido
 
+
     def __repr__(self):
-        return f" Cedula : {self.cedula} , Nombre : {self.nombre}, Apellido : {self.apellido}"
+        return f"Nombre : {self.nombre}, Apellido : {self.apellido}"
 
 
 
